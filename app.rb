@@ -4,6 +4,7 @@ require './models/user'
 require './models/post'
 
 enable :sessions
+
 set :database, {adapter: "postgresql", database: "rumblr"}
 
 get '/' do

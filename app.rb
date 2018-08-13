@@ -38,11 +38,20 @@ get '/sign_in' do
 end
 
 post '/sign_in' do
+    if @user && user.password == params[:password]
+        session[:user_id] = @user.id
+        redirect "/"
+    else
+        # need warning message
 
+        redirect "/sign_in"
+    end
 end
 
 get 'sign_out' do
     session[:user_id] = nil
+
+    redirect "/"
 end
 
 

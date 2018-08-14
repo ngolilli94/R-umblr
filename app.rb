@@ -29,7 +29,7 @@ post '/register' do
         # Log user in
         session[:user_id] = @user.id
         # Send to homepage
-        redirect "/"
+        redirect '/'
 end
 
 # Sign in & out
@@ -40,18 +40,27 @@ end
 post '/sign_in' do
     if @user && user.password == params[:password]
         session[:user_id] = @user.id
-        redirect "/"
+        redirect '/'
     else
         # need warning message
 
-        redirect "/sign_in"
+        redirect '/sign_in'
     end
 end
 
-get 'sign_out' do
+get '/sign_out' do
     session[:user_id] = nil
 
-    redirect "/"
+    redirect '/'
+end
+
+# Creating blog post
+get '/create_post' do
+    if session[:user_id]
+        erb :create_post
+    else
+        erb :error_page
+    end
 end
 
 

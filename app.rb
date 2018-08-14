@@ -38,6 +38,8 @@ get '/sign_in' do
 end
 
 post '/sign_in' do
+    @user = Users.find_by(username: params[:username])
+
     if @user && user.password == params[:password]
         session[:user_id] = @user.id
         redirect '/'
@@ -61,6 +63,15 @@ get '/create_post' do
     else
         erb :error_page
     end
+end
+
+post '/create_post' do
+    
+end
+
+# Showing blog post
+get '/post/:id' do
+    erb :show_single_post
 end
 
 

@@ -70,10 +70,13 @@ get '/create_post' do
 end
 
 post '/create_post' do
+    @user = User.find_by(id: session[:user_id])
+
     @new_post = Posts.create(
         title: params[:title],
         image: params[:image],
-        content: params[:content])
+        content: params[:content],
+        user_id: @user.id)
     if @new_post.save
         redirect "/post/#{@new_post.id}"
     else
@@ -88,5 +91,11 @@ get '/post/:id' do
   
     erb :show_single_post
 end
+
+# Showing all posts by single user
+get '/:username/posts' do
+
+end
+
 
 

@@ -11,7 +11,7 @@ get '/' do
     if session[:user_id] != nil
         erb :user_homepage, :layout => :user_background
     else
-        erb :default_homepage
+        erb :default_homepage, :layout => :default_background
     end
 end
 

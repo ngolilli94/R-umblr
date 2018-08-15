@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAK;EACD,gBAAgB,EAAE,6BAA6B;EAC/C,eAAe,EAAE,KAAK;EACtB,iBAAiB,EAAE,SAAS;EAC5B,gBAAgB,EAAE,OAAO",
+"sources": ["default_home_styles.scss"],
+"names": [],
+"file": "default_home_styles.css"
+}

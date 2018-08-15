@@ -13,6 +13,7 @@
   <span><a href="<%= url('/') %>">Home</a></span>
   <span><a href="<%= url('/create_post') %>">Create Post</a></span>
   <span><a href="<%= url('/sign_out') %>">Sign Out</a></span>
+  <span><a href="/user/<%=session[:user_id]%>/edit">Delete Account</a></span>
 <% else %>
   <span><a href="<%= url('/') %>">Home</a></span>
   <span><a href="<%= url('/sign_in') %>">Sign In</a></span>

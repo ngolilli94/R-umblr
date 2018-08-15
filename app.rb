@@ -8,7 +8,7 @@ enable :sessions
 set :database, {adapter: "postgresql", database: "rumblr"}
 
 get '/' do
-    if session[:user_id]
+    if session[:user_id] != nil
         erb :user_homepage
     else
         erb :default_homepage
@@ -58,6 +58,21 @@ get '/sign_out' do
     session[:user_id] = nil
 
     redirect "/"
+end
+
+# deleting account
+get '/user/:id/edit' do
+    @current_user = User.find(params[:id])
+    
+    erb :edit_user
+end
+
+delete '/user/:id' do
+    @current_user = User.find(params[:id])
+    @current_user.destroy
+    session[:user_id] = nil
+
+    redirect '/'
 end
 
 # Creating blog post

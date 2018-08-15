@@ -8,7 +8,7 @@ enable :sessions
 set :database, {adapter: "postgresql", database: "rumblr"}
 
 get '/' do
-    if session[:user_id]
+    if session[:user_id] != nil
         erb :user_homepage
     else
         erb :default_homepage
@@ -60,6 +60,21 @@ get '/sign_out' do
     redirect "/"
 end
 
+# deleting account
+get '/user/:id/edit' do
+    @current_user = User.find(params[:id])
+    
+    erb :edit_user
+end
+
+delete '/user/:id' do
+    @current_user = User.find(params[:id])
+    @current_user.destroy
+    session[:user_id] = nil
+
+    redirect '/'
+end
+
 # Creating blog post
 get '/create_post' do
     if session[:user_id]
@@ -70,10 +85,13 @@ get '/create_post' do
 end
 
 post '/create_post' do
-    @new_post = Posts.create(
+    @user = User.find_by(id: session[:user_id])
+
+    @new_post = Post.create(
         title: params[:title],
         image: params[:image],
-        content: params[:content])
+        content: params[:content],
+        user_id: @user.id)
     if @new_post.save
         redirect "/post/#{@new_post.id}"
     else
@@ -84,9 +102,18 @@ end
 
 # Showing blog post
 get '/post/:id' do
-    @created_post = Posts.find(params[:id])
+    @created_post = Post.find(params[:id])
   
     erb :show_single_post
 end
+
+# Showing all posts by single user
+get '/user/:id/posts' do
+    @single_user = User.find(params[:id])
+    @user_posts = @single_user.posts
+
+    erb :user_recent_posts
+end
+
 
 

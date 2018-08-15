@@ -9,7 +9,7 @@ set :database, {adapter: "postgresql", database: "rumblr"}
 
 get '/' do
     if session[:user_id] != nil
-        erb :user_homepage
+        erb :user_homepage, :layout => :user_background
     else
         erb :default_homepage
     end

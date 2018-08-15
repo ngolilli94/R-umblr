@@ -72,7 +72,7 @@ end
 post '/create_post' do
     @user = User.find_by(id: session[:user_id])
 
-    @new_post = Posts.create(
+    @new_post = Post.create(
         title: params[:title],
         image: params[:image],
         content: params[:content],
@@ -87,14 +87,17 @@ end
 
 # Showing blog post
 get '/post/:id' do
-    @created_post = Posts.find(params[:id])
+    @created_post = Post.find(params[:id])
   
     erb :show_single_post
 end
 
 # Showing all posts by single user
-get '/:username/posts' do
+get '/user/:id/posts' do
+    @single_user = User.find(params[:id])
+    @user_posts = @single_user.posts
 
+    erb :user_recent_posts
 end
 
 

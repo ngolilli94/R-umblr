@@ -1,0 +1,21 @@
+body {
+  background-image: url(/images/sign_in_page.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #F0D9B7; }
+
+#signInContainer {
+  display: flex;
+  justify-content: center; }
+  #signInContainer .field {
+    height: 3em; }
+    #signInContainer .field #username, #signInContainer .field #password {
+      height: 3em;
+      width: 25em;
+      border-radius: 5px; }
+  #signInContainer #signInButton {
+    display: block;
+    margin: auto;
+    width: 10em; }
+
+/*# sourceMappingURL=sign_in_styles.css.map */

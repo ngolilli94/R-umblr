@@ -17,7 +17,7 @@ end
 
 # Create account
 get '/register' do
-    erb :register_form
+    erb :register_form, :layout => :register_background
 end
 
 post '/register' do
@@ -38,7 +38,7 @@ end
 
 # Sign in & out
 get '/sign_in' do
-    erb :sign_in_form
+    erb :sign_in_form, :layout => :sign_in_background
 end
 
 post '/sign_in' do

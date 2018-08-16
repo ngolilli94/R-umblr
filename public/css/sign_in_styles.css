@@ -2,11 +2,28 @@ body {
   background-image: url(/images/sign_in_page.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #F0D9B7; }
+  background-color: #F0D9B7;
+  margin: 0; }
+
+nav {
+  width: 100%;
+  background-color: #ffffffB3;
+  display: inline-flex;
+  justify-content: flex-end; }
+  nav span {
+    margin: 0 15px; }
+  nav a {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5em;
+    color: #000000;
+    text-decoration: none; }
+  nav a:hover {
+    color: #952823; }
 
 #signInContainer {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 20%; }
   #signInContainer .field {
     height: 3em; }
     #signInContainer .field #username, #signInContainer .field #password {

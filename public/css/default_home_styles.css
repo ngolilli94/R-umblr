@@ -20,4 +20,25 @@ nav {
   nav a:hover {
     color: #AE78A5; }
 
+#welcome {
+  width: 50%;
+  background-color: #ffffff99;
+  border-radius: 5%;
+  margin: auto; }
+  #welcome h1 {
+    font-family: 'Homemade Apple', cursive;
+    text-align: center; }
+  #welcome h3 {
+    font-family: 'Patrick Hand', cursive;
+    text-align: center; }
+  #welcome .center {
+    font-family: 'Patrick Hand', cursive;
+    text-align: center;
+    font-size: 1.2em; }
+    #welcome .center a {
+      text-decoration: none;
+      color: #54add3; }
+    #welcome .center a:hover {
+      color: #AE78A5; }
+
 /*# sourceMappingURL=default_home_styles.css.map */

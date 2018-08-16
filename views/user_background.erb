@@ -9,14 +9,16 @@
   <link rel="stylesheet" href="css/user_home_styles.css">
   <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
   <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 </head>
 
 <body>
   <div id="nav_buttons">
-    <button><a href="<%= url('/create_post') %>">New Post</a></button>
-    <button><a href="/user/<%=session[:user_id]%>/posts">Library</a></button>
-    <button><a href="/user/<%=session[:user_id]%>/edit">Account Settings</a></button>
-    <button><a href="<%= url('/sign_out') %>">Sign Out</a></button>
+    <button class="animated fadeInRight" ><a href="<%= url('/create_post') %>">New Post</a></button>
+    <button class="animated fadeInRight" ><a href="/user/<%=session[:user_id]%>/posts">Library</a></button>
+    <button class="animated fadeInRight"><a href="/user/<%=session[:user_id]%>/edit">Account Settings</a></button>
+    <button class="animated fadeInRight"><a href="<%= url('/sign_out') %>">Sign Out</a></button>
   </div>
   <%=yield%>
 

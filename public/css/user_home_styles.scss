@@ -4,3 +4,35 @@ body {
     background-repeat: no-repeat;
     background-color: #F0D9B7;
 }
+
+#nav_buttons {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    position: relative;
+    margin-left: 60%;
+    margin-top: 5%;
+
+    button {
+        background-image: url(/images/button_background.jpg);
+        border: double;
+        border-radius: 5px;
+        height: 5em;
+        margin: 3em;
+
+        a {
+            font-family: 'Homemade Apple', cursive;
+            font-size: 2em;
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #3466b0;
+        }
+    }
+
+    button:hover {
+        border-color: #3466b0;
+    }
+}

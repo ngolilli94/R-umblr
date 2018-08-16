@@ -5,16 +5,21 @@
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>NEED A TITLE</title> 
+  <title>Visual Novel Book Club</title> 
   <link rel="stylesheet" href="css/user_home_styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+  <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 </head>
 
 <body>
-  <span><a href="<%= url('/') %>">Home</a></span>
-  <span><a href="<%= url('/create_post') %>">Create Post</a></span>
-  <span><a href="<%= url('/sign_out') %>">Sign Out</a></span>
-  <span><a href="/user/<%=session[:user_id]%>/edit">Delete Account</a></span>
-
+  <div id="nav_buttons">
+    <button class="animated fadeInRight" ><a href="<%= url('/create_post') %>">New Post</a></button>
+    <button class="animated fadeInRight" ><a href="/user/<%=session[:user_id]%>/posts">Library</a></button>
+    <button class="animated fadeInRight"><a href="/user/<%=session[:user_id]%>/edit">Account Settings</a></button>
+    <button class="animated fadeInRight"><a href="<%= url('/sign_out') %>">Sign Out</a></button>
+  </div>
   <%=yield%>
 
 </body>

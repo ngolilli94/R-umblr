@@ -7,15 +7,18 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Visual Novel Book Club</title>
   <link rel="stylesheet" href="/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
   <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 
 <body>
 <% if session[:user_id] %>
-  <span><a href="<%= url('/') %>">Home</a></span>
-  <span><a href="<%= url('/create_post') %>">Create Post</a></span>
-  <span><a href="<%= url('/sign_out') %>">Sign Out</a></span>
-  <span><a href="/user/<%=session[:user_id]%>/edit">Delete Account</a></span>
+  <nav>
+    <span><a href="<%= url('/') %>">Home</a></span>
+    <span><a href="<%= url('/create_post') %>">New Post</a></span>
+    <span><a href="/user/<%=session[:user_id]%>/edit">Account Settings</a></span>
+    <span><a href="<%= url('/sign_out') %>">Sign Out</a></span>
+  </nav>
 <% else %>
   <span><a href="<%= url('/') %>">Home</a></span>
   <span><a href="<%= url('/sign_in') %>">Sign In</a></span>

@@ -18,9 +18,10 @@ nav {
   nav a:hover {
     color: #3466B0; }
 
-.postBox {
+.postBox, .singlePost {
   width: 80%;
   margin: auto;
-  background-color: #ffffff99; }
+  background-color: #ffffff99;
+  border-radius: 5px; }
 
 /*# sourceMappingURL=styles.css.map */

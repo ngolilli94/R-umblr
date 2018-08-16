@@ -26,8 +26,9 @@ nav {
     }
 }
 
-.postBox {
+.postBox, .singlePost {
     width: 80%;
     margin: auto;
     background-color: #ffffff99;
+    border-radius: 5px;
 }

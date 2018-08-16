@@ -48,7 +48,6 @@ post '/sign_in' do
         session[:user_id] = @user.id
         redirect "/"
     else
-        <h4>It appears your username or password is incorrect!</h4>
 
         redirect "/sign_in"
     end

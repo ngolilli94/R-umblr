@@ -7,14 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NEED A TITLE</title> 
   <link rel="stylesheet" href="css/default_home_styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
   <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 
 <body>
-  <span><a href="<%= url('/') %>">Home</a></span>
-  <span><a href="<%= url('/sign_in') %>">Sign In</a></span>
-  <span><a href="<%= url('/register') %>">Register</a></span>
-
+  <nav>
+    <span><a href="<%= url('/') %>">Home</a></span>
+    <span><a href="<%= url('/sign_in') %>">Sign In</a></span>
+    <span><a href="<%= url('/register') %>">Register</a></span>
+  </nav>
   <%=yield%>
 
 </body>

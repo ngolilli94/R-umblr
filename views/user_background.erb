@@ -5,22 +5,15 @@
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Visual Novel Book Club</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
+  <title>NEED A TITLE</title> 
+  <link rel="stylesheet" href="css/user_home_styles.css">
 </head>
 
 <body>
-<% if session[:user_id] %>
   <span><a href="<%= url('/') %>">Home</a></span>
   <span><a href="<%= url('/create_post') %>">Create Post</a></span>
   <span><a href="<%= url('/sign_out') %>">Sign Out</a></span>
   <span><a href="/user/<%=session[:user_id]%>/edit">Delete Account</a></span>
-<% else %>
-  <span><a href="<%= url('/') %>">Home</a></span>
-  <span><a href="<%= url('/sign_in') %>">Sign In</a></span>
-  <span><a href="<%= url('/register') %>">Sign Up</a></span>
-<% end %>
 
   <%=yield%>
 

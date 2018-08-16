@@ -1,0 +1,75 @@
+body {
+    background-image: url(/images/register_page.jpg);
+    background-size: cover;              
+    background-repeat: no-repeat;
+    background-color: #6790C7;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    background-color: #ffffffB3;
+    display: inline-flex;
+    justify-content: flex-end;
+
+    span {
+        margin: 0 15px;;
+    }
+
+    a {
+        font-family: 'Patrick Hand', cursive;
+        font-size: 1.5em;
+        color: #000000;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #3466B0;
+    }
+}
+
+#registerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 5%;
+    
+    h1, h4 {
+        font-family: 'Homemade Apple', cursive;
+    }  
+
+    form { 
+        display: table;
+
+        .field { 
+            display: table-row;   
+            height: 2.5em;   
+
+            label { 
+                display: table-cell;
+                font-family: 'Rancho', cursive;
+                font-size: 1.5em;
+            }
+            input { 
+                display: table-cell;
+            }
+            #firstname, #lastname, #birthday, #email, #username, #password {
+                height: 2em;
+                width: 25em;
+                border-radius: 5px;
+            }
+        }
+        #registerButton {
+            display: block;
+            margin: auto;
+            width: 10em;
+        }
+    }  
+}
+
+
+
+
+

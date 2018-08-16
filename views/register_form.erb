@@ -1,11 +1,36 @@
-<h1>Sign Up</h1>
 
-<form action="/register" method="post">
-  First Name: <input type="text" name="first_name" id="firstname">
-  Last Name: <input type="text" name="last_name" id="lastname">
-  Birthday: <input type="date" name="birthday" id="birthday">
-  E-mail: <input type="email" name="email" id="email" placeholder="E-mail">
-  Username: <input type="text" name="username" id="username">
-  Password: <input type="password" name="password" id="password">
-  <input type="submit" value="Create account">
-</form>
+<div id="registerContainer">
+  <div>
+    <h1>Sign Up</h1>
+    <h4>Please fill in the following fields:</h4>
+  </div>
+  <form class="ui form" action"/register" method="post">
+    <div class="field">
+      <label>First Name:</label>
+      <input type="text" name="first_name" id="firstname">
+    </div>
+    <div class="field">
+      <label>Last Name:</label>
+      <input type="text" name="last_name" id="lastname">
+    </div>
+    <div class="field">
+      <label>Birthday:</label>
+      <input type="date" name="birthday" id="birthday">
+    </div>
+    <div class="field">
+      <label>Email:</label>
+      <input type="email" name="email" id="email">
+    </div>
+    <div class="field">
+      <label>Username:</label>
+      <input type="text" name="username" id="username">
+    </div>
+    <div class="field">
+      <label>Password:</label>
+      <input type="password" name="password" id="password">
+    </div>
+  </form>
+  <div id="buttonDiv">
+    <input class="ui button" type="submit" id="registerButton" value="Create Account">
+    </div>
+</div>

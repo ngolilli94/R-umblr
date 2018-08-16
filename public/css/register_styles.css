@@ -45,8 +45,7 @@ nav {
         width: 25em;
         border-radius: 5px; }
     #registerContainer form #registerButton {
-      display: block;
-      margin: auto;
+      margin-left: 130%;
       width: 10em; }
 
 /*# sourceMappingURL=register_styles.css.map */

@@ -1,4 +1,27 @@
 body {
     background-image: url(/images/default2.jpg);
     background-repeat: repeat;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    background-color: #ffffffB3;
+    display: inline-flex;
+    justify-content: flex-end;
+
+    span {
+        margin: 0 15px;;
+    }
+
+    a {
+        font-family: 'Patrick Hand', cursive;
+        font-size: 1.5em;
+        color: #000000;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #3466B0;
+    }
 }

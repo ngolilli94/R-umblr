@@ -1,4 +1,7 @@
-<form method="POST" action="/user/<%= @current_user.id %>">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Delete <%= @current_user.username %>">
-</form>
+<div>
+    <h1>Would you like to delete your account?</h1>
+    <form method="POST" action="/user/<%= @current_user.id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete <%= @current_user.username %>">
+    </form>
+</div>

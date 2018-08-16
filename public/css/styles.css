@@ -18,4 +18,9 @@ nav {
   nav a:hover {
     color: #3466B0; }
 
+.postBox {
+  width: 80%;
+  margin: auto;
+  background-color: #ffffff99; }
+
 /*# sourceMappingURL=styles.css.map */

@@ -48,7 +48,7 @@ post '/sign_in' do
         session[:user_id] = @user.id
         redirect "/"
     else
-        # need warning message
+        <h4>It appears your username or password is incorrect!</h4>
 
         redirect "/sign_in"
     end
@@ -63,8 +63,6 @@ end
 # deleting account
 get '/user/:id/edit' do
     @current_user = User.find(params[:id])
-    
-    erb :edit_user
 end
 
 delete '/user/:id' do

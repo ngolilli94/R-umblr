@@ -27,3 +27,35 @@ nav {
         color: #AE78A5;
     }
 }
+
+#welcome {
+    width: 50%;
+    background-color: #ffffff99;
+    border-radius: 5%;
+    margin: auto;
+    
+    h1 {
+        font-family: 'Homemade Apple', cursive;
+        text-align: center;
+    }
+
+    h3 {
+        font-family: 'Patrick Hand', cursive;
+        text-align: center;
+    }
+
+    .center {
+        font-family: 'Patrick Hand', cursive;
+        text-align: center;
+        font-size: 1.2em;
+
+        a {
+            text-decoration: none;
+            color: #54add3;
+        }
+
+        a:hover {
+            color: #AE78A5;
+        }
+    }
+}

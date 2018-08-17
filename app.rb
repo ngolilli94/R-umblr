@@ -62,6 +62,8 @@ end
 # deleting account
 get '/user/:id/edit' do
     @current_user = User.find(params[:id])
+
+    erb :edit_user
 end
 
 delete '/user/:id' do

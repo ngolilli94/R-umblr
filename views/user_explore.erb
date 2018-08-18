@@ -3,7 +3,7 @@
     <h3>See what others are reading!</h3>
     <% @user_list.each do |single_user| %> 
         <ul>
-            <li><a href="/user/:id/posts"> <%= single_user.username %> </a></li>
+            <li><a href="/user/<%= single_user.id %>/posts"> <%= single_user.username %> </a></li>
         </ul>
     <% end %>
 </div>

@@ -112,5 +112,10 @@ get '/user/:id/posts' do
     erb :user_recent_posts
 end
 
+# Showing all users
+get '/explore' do 
+    @user_list = User.all
 
+    erb :user_explore
+end 
 

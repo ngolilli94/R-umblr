@@ -22,8 +22,13 @@ nav {
 
 #signInContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 20%; }
+  align-items: center;
+  align-content: center;
+  margin-top: 15%; }
+  #signInContainer h1 {
+    font-family: 'Homemade Apple', cursive; }
   #signInContainer .field {
     height: 3em; }
     #signInContainer .field #username, #signInContainer .field #password {

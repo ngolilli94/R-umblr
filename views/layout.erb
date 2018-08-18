@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Visual Novel Book Club</title>
   <link rel="stylesheet" href="/css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Patrick+Hand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=ABeeZee|Homemade+Apple|Patrick+Hand" rel="stylesheet">
   <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
   <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
   <script>
@@ -22,6 +22,7 @@
   <nav>
     <span><a href="<%= url('/') %>">Home</a></span>
     <span><a href="/user/<%=session[:user_id]%>/posts">My Posts</a></span>
+    <span><a href="<%= url('/explore') %>">Explore</a></span>
     <span><a href="/user/<%=session[:user_id]%>/edit">Account Settings</a></span>
     <span><a href="<%= url('/sign_out') %>">Sign Out</a></span>
   </nav>

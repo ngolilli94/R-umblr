@@ -1,8 +1,8 @@
 <div class="postBox">
 <% @user_posts.limit(20).order('created_on DESC').each do |post_element| %>
-    <h1> <%= post_element.title %> </h1>
-    <img src="<%= post_element.image %>"
-    <p> <%= post_element.content %> </p>
+    <h1 class="postFont"> <%= post_element.title %> </h1>
+    <img class="postCenter" src="<%= post_element.image %>">
+    <p class="postFont"> <%= post_element.content %> </p>
     <p><small>Created by <%= @single_user.username %> at <%= post_element.created_on %> </small></p>
     <hr>
 <% end %>

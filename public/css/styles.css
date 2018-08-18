@@ -27,4 +27,19 @@ nav {
 .heading {
   font-family: 'Homemade Apple', cursive; }
 
+.postCenter {
+  display: block;
+  margin: 0 auto;
+  max-width: 70%; }
+
+.postFont {
+  display: block;
+  margin: 15px; }
+
+small {
+  color: #0080ff; }
+
+#exploreContainer {
+  margin: 15px; }
+
 /*# sourceMappingURL=styles.css.map */

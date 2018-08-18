@@ -31,8 +31,10 @@ nav {
   #welcome h3 {
     font-family: 'Patrick Hand', cursive;
     text-align: center; }
-  #welcome .center {
+  #welcome h2, #welcome p {
     font-family: 'Patrick Hand', cursive;
+    margin: 8px; }
+  #welcome .center {
     text-align: center;
     font-size: 1.2em; }
     #welcome .center a {

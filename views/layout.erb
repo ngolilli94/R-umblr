@@ -21,7 +21,7 @@
 <% if session[:user_id] %>
   <nav>
     <span><a href="<%= url('/') %>">Home</a></span>
-    <span><a href="/user/<%=session[:user_id]%>/posts">My Posts</a></span>
+    <span><a href="/user/<%=session[:user_id]%>/posts">Library</a></span>
     <span><a href="<%= url('/explore') %>">Explore</a></span>
     <span><a href="/user/<%=session[:user_id]%>/edit">Account Settings</a></span>
     <span><a href="<%= url('/sign_out') %>">Sign Out</a></span>

@@ -8,6 +8,17 @@ The Visual Novel Bookclub is a blog designed for fans of visual novel games to t
 
 Currently users are able to perform basic functions, such as registering for an account, signing in and out, creating a blog post when signed in, seeing their previous posts, seeing other users' posts, and deleting their account.
 
+## Deployment
+Deployed to Heroku at https://thawing-temple-28332.herokuapp.com/
+
+#### Login
+*Username*: lilliann <br>
+*Password*: 1111
+
+<img src="vnbc_home.jpeg">
+<img src="vnbc_menu.jpeg">
+<img src="vnbc_postSample.png">
+
 ## Built Using:
 * Sinatra
 * ActiveRecord
@@ -16,11 +27,6 @@ Currently users are able to perform basic functions, such as registering for an 
 * Animate.css
 * HTML
 * SCSS
-
-
-<img src="vnbc_home.jpeg">
-<img src="vnbc_menu.jpeg">
-<img src="vnbc_postSample.png">
     
 
     

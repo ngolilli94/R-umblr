@@ -20,6 +20,7 @@ Currently users are able to perform basic functions, such as registering for an 
 
 <img src="vnbc_home.jpeg">
 <img src="vnbc_menu.jpeg">
+<img src="vnbc_postSample.png">
     
 
     

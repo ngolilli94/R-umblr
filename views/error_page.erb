@@ -1,1 +1,22 @@
-<h1>Oops! Looks like you don't have access to this page!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Visual Novel Book Club</title> 
+  <link rel="stylesheet" href="/css/error_styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Patrick+Hand|Rancho" rel="stylesheet">
+  <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+
+<div id="errorContainer">
+  <h1> Oops! Looks like you don't have access to this page! </h1>
+  <h2> Please <a href="<%= url('/sign_in') %>"> sign in </a> to continue. </h2>
+</div>
+
+</body>
+</html>

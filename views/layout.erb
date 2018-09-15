@@ -27,9 +27,11 @@
     <span><a href="<%= url('/sign_out') %>">Sign Out</a></span>
   </nav>
 <% else %>
-  <span><a href="<%= url('/') %>">Home</a></span>
-  <span><a href="<%= url('/sign_in') %>">Sign In</a></span>
-  <span><a href="<%= url('/register') %>">Sign Up</a></span>
+  <nav>
+    <span><a href="<%= url('/') %>">Home</a></span>
+    <span><a href="<%= url('/sign_in') %>">Sign In</a></span>
+    <span><a href="<%= url('/register') %>">Sign Up</a></span>
+  </nav>
 <% end %>
 
   <%=yield%>

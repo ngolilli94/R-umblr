@@ -1,6 +1,8 @@
 <div class="singlePost">
-<h1 class="postFont"> <%= @created_post.title %> </h1>
-<img class="postCenter" src="<%= @created_post.image %>">
-<div class="postFont"> <%= @created_post.content %> </div>
-<p><small> Created on <%= @created_post.created_on %> </small></p>
+    <h1 class="postFont"> <%= @created_post.title %> </h1>
+    <img class="postCenter" src="<%= @created_post.image %>">
+    <div class="postFont"> <%= @created_post.content %> </div>
+    <div class="small">
+        <span><small> Created on <%= @created_post.created_on %> <span><small><a href="/post/<%= @created_post.id %>/edit"> Edit </a></small></span></small></span>
+    </div>
 </div>

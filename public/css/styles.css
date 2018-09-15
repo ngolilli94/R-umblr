@@ -36,13 +36,22 @@ nav {
   display: block;
   margin: 15px; }
   .postFont a {
-    color: #3fb0ca;
+    color: #34a8b0;
     text-decoration: none; }
   .postFont a:hover {
     color: #a2b5ca; }
 
-small {
-  color: #0080ff; }
+.small {
+  display: flex;
+  justify-content: space-between; }
+  .small small {
+    color: #0080ff; }
+    .small small a {
+      color: #3466B0;
+      text-decoration: none;
+      font-weight: bold; }
+    .small small a:hover {
+      color: #a0adbb; }
 
 #exploreContainer {
   margin: 15px; }

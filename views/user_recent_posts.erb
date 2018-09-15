@@ -3,7 +3,10 @@
     <h1 class="postFont"> <a href="/post/<%= post_element.id %>"> <%= post_element.title %> </a> </h1>
     <img class="postCenter" src="<%= post_element.image %>">
     <div class="postFont"> <%= post_element.content %> </div>
-    <p><small>Created by <%= @single_user.username %> at <%= post_element.created_on %> </small></p>
+    <div class="small">
+        <span><small>Created by <%= @single_user.username %> at <%= post_element.created_on %> </small></span>
+        <span><small> <a href="/post/<%= post_element.id %>/edit"> Edit </a></small></span>
+    </div>
     <hr>
 <% end %>
 </div>

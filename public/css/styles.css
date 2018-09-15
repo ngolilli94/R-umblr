@@ -49,7 +49,8 @@ nav {
     .small small a {
       color: #3466B0;
       text-decoration: none;
-      font-weight: bold; }
+      font-weight: bold;
+      margin-right: 20%; }
     .small small a:hover {
       color: #a0adbb; }
 

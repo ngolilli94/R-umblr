@@ -1,0 +1,12 @@
+#errorContainer {
+  margin: 5%;
+  text-align: center; }
+  #errorContainer h1, #errorContainer h2 {
+    font-family: 'Patrick Hand', cursive; }
+    #errorContainer h1 a, #errorContainer h2 a {
+      text-decoration: none;
+      color: #3466B0; }
+    #errorContainer h1 a:hover, #errorContainer h2 a:hover {
+      color: #AE78A5; }
+
+/*# sourceMappingURL=error_styles.css.map */

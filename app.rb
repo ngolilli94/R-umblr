@@ -52,7 +52,7 @@ post '/sign_in' do
 end
 
 get '/sign_out' do
-    session[:user_id] = nil
+    session[:user_id] == nil
 
     redirect "/"
 end
@@ -60,7 +60,7 @@ end
 # editing & deleting account
 get '/user/:id/edit' do
     @current_user = User.find(params[:id])
-    if session[:user_id]
+    if session[:user_id] == @current_user.id
         erb :edit_user
     else
         erb :error_page
@@ -103,6 +103,28 @@ post '/create_post' do
         erb :create_post
     end
 
+end
+
+# Editing & deleting a blog post
+get '/post/:id/edit' do
+    @edit_post = Post.find(params[:id])
+    if session[:user_id]
+        erb :edit_post
+    else
+        erb :error_page
+    end
+end
+
+put '/post/:id' do 
+    @edit_post = Post.find(params[:id])
+    @edit_post.update(title: params[:title], image: params[:image], content: params[:content])
+end
+
+delete '/post/:id' do
+    @edit_post = Post.find(params[:id])
+    @edit_post.destroy
+
+    redirect '/user/:id/posts'
 end
 
 # Showing blog post

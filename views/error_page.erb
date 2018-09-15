@@ -14,9 +14,15 @@
 <body>
 
 <div id="errorContainer">
-  <h1> Oops! Looks like you don't have access to this page! </h1>
-  <h2> Please <a href="<%= url('/sign_in') %>"> sign in </a> to continue. </h2>
-</div>
+  <h1> Oops! Looks like you don&apos;t have access to this page! </h1>
+  
+  <% if session[:user_id] %>
+    <h2> Please try a different page. </h2>
+  <% else %>
+    <h2> Please <a href="<%= url('/sign_in') %>"> sign in </a> to continue. </h2>
+  <% end %>
+
+  </div>
 
 </body>
 </html>

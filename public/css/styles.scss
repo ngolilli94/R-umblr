@@ -31,6 +31,7 @@ nav {
     margin: auto;
     background-color: #ffffff99;
     border-radius: 5px;
+
 }
 
 .heading {
@@ -46,6 +47,15 @@ nav {
 .postFont {
     display: block;
     margin: 15px;
+
+    a {
+        color: #3fb0ca;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #a2b5ca;
+    }
 }
 
 small {

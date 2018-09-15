@@ -52,7 +52,7 @@ post '/sign_in' do
 end
 
 get '/sign_out' do
-    session[:user_id] = nil
+    session[:user_id] == nil
 
     redirect "/"
 end
@@ -60,7 +60,7 @@ end
 # editing & deleting account
 get '/user/:id/edit' do
     @current_user = User.find(params[:id])
-    if session[:user_id]
+    if session[:user_id] == @current_user.id
         erb :edit_user
     else
         erb :error_page

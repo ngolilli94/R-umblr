@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Visual Novel Book Club</title> 
+  <link rel="stylesheet" href="/css/edit_post_styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Patrick+Hand" rel="stylesheet">
+  <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+    <div id="editPostContainer">
+
+    <form method="POST" action="/dogs/<%= @edit_post.id %>"> 
+
+        <input type="hidden" name="_method" value="PUT">
+        
+        <input type="text" name="title" placeholder="New title" value="<%= @edit_post.title %>">
+        <input type="text" name="image"  placeholder="Image URL" value="<%= @edit_post.image %>">  
+        <input type="text" name="age" placeholder="Enter a age" value="<%= @edit_post.content %>"> 
+        <input type="submit" value="Submit">
+    </form>
+
+<form method="POST" action="/dogs/<%= @edit_post.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete <%= @edit_post.title %>">
+</form>
+
+</div>
+</body>

@@ -1,7 +1,46 @@
-<div>
-    <h1 class="heading">Would you like to delete your account?</h1>
-    <form method="POST" action="/user/<%= @current_user.id %>">
-        <input type="hidden" name="_method" value="DELETE">
-        <input type="submit" value="Delete <%= @current_user.username %>">
-    </form>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Visual Novel Book Club</title> 
+  <link rel="stylesheet" href="/css/edit_user_styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Patrick+Hand" rel="stylesheet">
+  <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+    <div id="editUserContainer">
+
+        <h3 class="heading">Account Information</h3>
+        <form class="ui form" method="POST" action="/user/<%= @current_user.id %>"> 
+            <input type="hidden" name="_method" value="PUT">
+
+            <div class="field">
+                <label> Username: </label>
+                <input type="text" name="username" placeholder="Enter a new username" value="<%= @current_user.username %>">
+            </div>
+
+            <div class="field">
+                <label> Password: </label>
+                <input type="password" name="password"  placeholder="Enter a new password" value="<%= @current_user.password %>">
+            </div>
+            
+            <div class="field">
+                <label> Email: </label>
+                <input type="text" name="email" placeholder="Enter your new email" value="<%= @current_user.email %>">
+            </div> 
+
+            <input type="submit" value="Update Account">
+        </form>
+        
+        <h3 class="heading">Would you like to delete your account?</h3>
+        <form method="POST" action="/user/<%= @current_user.id %>">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="Delete <%= @current_user.username %>">
+        </form>
+
+    </div>
+</body>

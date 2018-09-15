@@ -57,11 +57,16 @@ get '/sign_out' do
     redirect "/"
 end
 
-# deleting account
+# editing & deleting account
 get '/user/:id/edit' do
     @current_user = User.find(params[:id])
 
     erb :edit_user
+end
+
+put '/user/:id' do 
+    @current_user = User.find(params[:id])
+    @current_user.update(username: params[:username], password: params[:password], email: params[:email])
 end
 
 delete '/user/:id' do

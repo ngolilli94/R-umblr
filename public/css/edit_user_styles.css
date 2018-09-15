@@ -1,0 +1,19 @@
+#editUserContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+  margin-top: 5%;
+  margin-left: 5%; }
+  #editUserContainer form {
+    display: table; }
+    #editUserContainer form .field {
+      display: table-row;
+      height: 2.5em; }
+      #editUserContainer form .field label {
+        display: table-cell; }
+      #editUserContainer form .field input {
+        display: table-cell; }
+
+/*# sourceMappingURL=edit_user_styles.css.map */

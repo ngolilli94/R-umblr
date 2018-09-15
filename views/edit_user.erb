@@ -1,5 +1,21 @@
 <div>
-    <h1 class="heading">Would you like to delete your account?</h1>
+    <h3 class="heading">Account Information</h3>
+    <form method="POST" action="/user/<%= @current_user.id %>"> 
+        <input type="hidden" name="_method" value="PUT">
+
+        <label> Username: </label>
+        <input type="text" name="username" placeholder="Enter a new username" value="<%= @current_user.username %>">
+
+        <label> Password: </label>
+        <input type="password" name="password"  placeholder="Enter a new password" value="<%= @current_user.password %>">
+        
+        <label> Email: </label>
+        <input type="text" name="email" placeholder="Enter your new email" value="<%= @current_user.email %>"> 
+        
+        <input type="submit" value="Update Account">
+    </form>
+    
+    <h3 class="heading">Would you like to delete your account?</h3>
     <form method="POST" action="/user/<%= @current_user.id %>">
         <input type="hidden" name="_method" value="DELETE">
         <input type="submit" value="Delete <%= @current_user.username %>">

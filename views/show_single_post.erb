@@ -3,7 +3,11 @@
     <img class="postCenter" src="<%= @created_post.image %>">
     <div class="postFont"> <%= @created_post.content %> </div>
     <div class="small">
+    <% if session[:user_id] == @created_post.user_id %>
         <span><small> Created on <%= @created_post.created_on %></small></span> 
         <span><small><a href="/post/<%= @created_post.id %>/edit"> Edit </a></small></span>
+    <% else %>
+        <span><small> Created on <%= @created_post.created_on %></small></span> 
+   <% end %>   
     </div>
 </div>

@@ -1,0 +1,26 @@
+#editPostContainer {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: flex-start;
+    // align-items: flex-start;
+    // align-content: center;
+    margin-top: 2%;
+    margin-left: 5%;
+
+  form { 
+    display: table;
+
+    .field { 
+        display: table-row;   
+        height: 2.5em;   
+
+        label { 
+            display: table-cell;
+        }
+        input { 
+            display: table-cell;
+        }
+    }
+}  
+}
+

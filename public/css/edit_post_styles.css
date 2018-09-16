@@ -1,0 +1,14 @@
+#editPostContainer {
+  margin-top: 2%;
+  margin-left: 5%; }
+  #editPostContainer form {
+    display: table; }
+    #editPostContainer form .field {
+      display: table-row;
+      height: 2.5em; }
+      #editPostContainer form .field label {
+        display: table-cell; }
+      #editPostContainer form .field input {
+        display: table-cell; }
+
+/*# sourceMappingURL=edit_post_styles.css.map */

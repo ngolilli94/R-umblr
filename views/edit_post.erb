@@ -14,19 +14,37 @@
 <body>
     <div id="editPostContainer">
 
-    <form method="POST" action="/dogs/<%= @edit_post.id %>"> 
+    <h2 class="heading">Edit Post</h2>
+    <form class="ui form" method="POST" action="/post/<%= @edit_post.id %>"> 
 
         <input type="hidden" name="_method" value="PUT">
         
-        <input type="text" name="title" placeholder="New title" value="<%= @edit_post.title %>">
-        <input type="text" name="image"  placeholder="Image URL" value="<%= @edit_post.image %>">  
-        <input type="text" name="age" placeholder="Enter a age" value="<%= @edit_post.content %>"> 
-        <input type="submit" value="Submit">
+        <div class="field">
+            <label> Title: </label>
+            <input type="text" name="title" placeholder="New title" value="<%= @edit_post.title %>">
+        </div>
+
+        <div class="field">
+            <label> Image URL: </label>
+            <input type="text" name="image"  placeholder="Image URL" value="<%= @edit_post.image %>">
+        </div>
+
+        <div class="field">
+            <label> Original Post (HTML): </label>
+            <input type="text" name="content" value="<%= @edit_post.content %>">
+        </div>
+
+        <div class="field">
+            <label> Text Editor: </label>
+            <textarea name="content" id="writePost" value="<%= @edit_post.content %>"></textarea>
+        </div>
+
+        <input class="rightButton" type="submit" value="Update">
     </form>
 
-<form method="POST" action="/dogs/<%= @edit_post.id %>">
+<form method="POST" action="/post/<%= @edit_post.id %>">
     <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Delete <%= @edit_post.title %>">
+    <input class="rightButton" type="submit" value="Delete <%= @edit_post.title %>">
 </form>
 
 </div>

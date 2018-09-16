@@ -108,7 +108,7 @@ end
 # Editing & deleting a blog post
 get '/post/:id/edit' do
     @edit_post = Post.find(params[:id])
-    if session[:user_id]
+    if session[:user_id] == @edit_post.user_id
         erb :edit_post
     else
         erb :error_page
@@ -123,8 +123,9 @@ end
 delete '/post/:id' do
     @edit_post = Post.find(params[:id])
     @edit_post.destroy
+    @current_user = session[:user_id]
 
-    redirect '/user/:id/posts'
+    redirect "/user/#{@current_user}/posts"
 end
 
 # Showing blog post

@@ -2,7 +2,8 @@
   margin-top: 2%;
   margin-left: 5%; }
   #editPostContainer form {
-    display: table; }
+    display: table;
+    width: 90%; }
     #editPostContainer form .field {
       display: table-row;
       height: 2.5em; }

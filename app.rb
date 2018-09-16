@@ -52,7 +52,7 @@ post '/sign_in' do
 end
 
 get '/sign_out' do
-    session[:user_id] == nil
+    session[:user_id] = nil
 
     redirect "/"
 end

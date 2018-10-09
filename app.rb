@@ -70,6 +70,8 @@ end
 put '/user/:id' do 
     @current_user = User.find(params[:id])
     @current_user.update(username: params[:username], password: params[:password], email: params[:email])
+
+    redirect '/'
 end
 
 delete '/user/:id' do
@@ -118,6 +120,8 @@ end
 put '/post/:id' do 
     @edit_post = Post.find(params[:id])
     @edit_post.update(title: params[:title], image: params[:image], content: params[:content])
+
+    redirect "/post/#{@edit_post.id}"
 end
 
 delete '/post/:id' do

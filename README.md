@@ -12,8 +12,8 @@ Currently users are able to perform basic functions, such as registering for an 
 Deployed to Heroku at https://thawing-temple-28332.herokuapp.com/
 
 #### Login
-*Username*: lilliann <br>
-*Password*: 1111
+*Username*: otomequotes <br>
+*Password*: 1234
 
 <img src="vnbc_home.jpeg">
 <img src="vnbc_menu.jpeg">

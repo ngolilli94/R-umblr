@@ -5,5 +5,5 @@ gem "sinatra-flash"
 gem "activerecord"
 gem "pg"
 gem "sinatra-activerecord"
-gem "rake"
+gem "rack", ">= 2.0.6"
 
